@@ -1,17 +1,17 @@
-import * as React from 'react';
-import {useColorScheme, ColorSchemeName} from 'react-native';
 import {
-	useDimensions,
 	useAccessibilityInfo,
-	useDeviceOrientation
+	useDeviceOrientation, useDimensions
 } from '@react-native-community/hooks';
-import TailwindContext from './tailwind-context';
+import * as React from 'react';
+import { ColorSchemeName, useColorScheme } from 'react-native';
 import create from './create';
-import {Utilities} from './types';
+import TailwindContext from './tailwind-context';
+import { Utilities } from './types';
 
 interface Props {
 	utilities: Utilities;
 	colorScheme?: ColorSchemeName;
+	children?: React.ReactNode | React.ReactNode[]
 }
 
 const TailwindProvider: React.FC<Props> = ({
